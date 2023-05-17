@@ -1,6 +1,6 @@
-#Print Your Whole HTTP Request
+# Print Your Whole HTTP Request
 
-This repository contains a Node.js service that can receive HTTP requests to the endpoint /api/printrequest and return the whole HTTP request information in the format:
+This repository contains a Node.js service that can receive HTTP requests to the endpoint `/api/printrequest` and return the whole HTTP request information in the format:
 
 ```JSON
 {
@@ -20,7 +20,7 @@ Here is an example of an HTTP request to the endpoint /api/printrequest:
 
 Code snippet
 ```
-$ curl -X GET http://localhost:3000/api/printrequest
+$ curl -X GET https://print-your-http-request.herokuapp.com/api/printrequest
 ```
 
 The response will be a JSON object containing the whole HTTP request information:

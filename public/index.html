@@ -1,0 +1,29 @@
+<h1 id="print-your-whole-http-request">Print Your Whole HTTP Request</h1>
+<p>This repository contains a Node.js service that can receive HTTP requests to the endpoint <code>/api/printrequest</code> and return the whole HTTP request information in the format:</p>
+<pre><code class="lang-JSON">{
+  <span class="hljs-string">"method"</span>: <span class="hljs-string">"<span class="hljs-keyword">GET</span>"</span>,
+  <span class="hljs-string">"url"</span>: <span class="hljs-string">"/api/printrequest"</span>,
+  <span class="hljs-string">"headers"</span>: {
+    <span class="hljs-string">"Accept"</span>: <span class="hljs-string">"*/*"</span>,
+    <span class="hljs-string">"Connection"</span>: <span class="hljs-string">"close"</span>,
+    <span class="hljs-string">"User-Agent"</span>: <span class="hljs-string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"</span>
+  },
+  <span class="hljs-string">"body"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h2 id="example">Example</h2>
+<p>Here is an example of an HTTP request to the endpoint /api/printrequest:</p>
+<p>Code snippet</p>
+<pre><code><span class="hljs-symbol">$</span> curl -X GET https:<span class="hljs-comment">//print-your-http-request.herokuapp.com/api/printrequest</span>
+</code></pre><p>The response will be a JSON object containing the whole HTTP request information:</p>
+<pre><code class="lang-JSON">{
+  <span class="hljs-string">"method"</span>: <span class="hljs-string">"<span class="hljs-keyword">GET</span>"</span>,
+  <span class="hljs-string">"url"</span>: <span class="hljs-string">"/api/printrequest"</span>,
+  <span class="hljs-string">"headers"</span>: {
+    <span class="hljs-string">"Accept"</span>: <span class="hljs-string">"*/*"</span>,
+    <span class="hljs-string">"Connection"</span>: <span class="hljs-string">"close"</span>,
+    <span class="hljs-string">"User-Agent"</span>: <span class="hljs-string">"curl/7.79.1"</span>
+  },
+  <span class="hljs-string">"body"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
